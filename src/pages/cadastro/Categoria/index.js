@@ -35,7 +35,9 @@ function CadastroCategoria() {
 
   useEffect(() => {
     if (window.location.href.includes('localhost')) {
-      const URL = 'http://localhost:8000/categorias';
+      const URL = window.location.hostname.includes('localhost')
+        ? 'http://localhost:8000/categorias'
+        : 'https://marcoflix.herokuapp.com/categorias';
       fetch(URL)
         .then(async (respostaDoServer) => {
           if (respostaDoServer.ok) {
