@@ -6,7 +6,7 @@ function getAll() {
   return fetch(`${URL_CATEGORIES}`)
     .then(async (respostaDoServer) => {
       if (respostaDoServer.ok) {
-        const resposta = await respostaDoServer.json(); 
+        const resposta = await respostaDoServer.json();
         return resposta;
       }
 
@@ -18,7 +18,7 @@ function getAllWithVideos() {
   return fetch(`${URL_CATEGORIES}?_embed=videos`)
     .then(async (respostaDoServer) => {
       if (respostaDoServer.ok) {
-        const resposta = await respostaDoServer.json(); 
+        const resposta = await respostaDoServer.json();
         return resposta;
       }
 
